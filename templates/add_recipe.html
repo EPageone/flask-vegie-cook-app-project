@@ -5,28 +5,38 @@
 
     <div class="row card-panel purple lighten-5">
         <form class="col s12" method="POST" action="">
+			<div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-purple-text text-darken-4"></i>
+					<select id="recipe_name" name="recipe_name" class="validate" required>
+                        <option value="" disabled selected>Choose Veg</option>
+                        {% for recie in recipes %}
+                            <option value="{{ vegies.vegie_name }}">{{ vegies.vegie_name }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="category_name">Choose Veg</label>
+				</div>
+			</div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-purple-text text-darken-4"></i>
-                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                    <input id="ingredients_list" name="ingredients_list" minlength="5" maxlength="50"
                         type="text" class="validate" required>
-                    <label for="recipe_name">Recipe Name</label>
+                    <label for="ingredients_list">Ingredients List</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-purple-text text-darken-4"></i>
-                    <textarea id="ingredients_list" name="ingredients_list" minlength="5"
+                    <textarea id="recipe_description" name="recipe_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
-                    <label for="task_description">Ingredients List</label>
+                    <label for="recipe_description">Recipe Description</label>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-align-left prefix light-purple-text text-darken-4"></i>
-                        <textarea id="recipe_description" name="recipe_description" minlength="5"
-                            maxlength="200" class="materialize-textarea validate" required></textarea>
-                        <label for="recipe_description">Recipe Description</label>
-                    </div>
             </div>
+            
+				</div>
+			</div>
+        </form>
+    </div>
 
 {% endblock %}
