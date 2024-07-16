@@ -4,7 +4,7 @@
     <h3 class="light-purple-text text-darken-4 center-align">Add Recipe</h3>
 
     <div class="row card-panel purple lighten-5">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
 			<div class="row">
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix light-purple-text text-darken-4"></i>
@@ -17,6 +17,7 @@
 					<label for="category_name">Choose Veg</label>
 				</div>
 			</div>
+            <!-- ingredients list -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-purple-text text-darken-4"></i>
@@ -25,6 +26,7 @@
                     <label for="ingredients_list">Ingredients List</label>
                 </div>
             </div>
+            <!-- recipe description -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-purple-text text-darken-4"></i>
@@ -34,9 +36,15 @@
                 </div>
             </div>
             
-				</div>
-			</div>
-        </form>
+        <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large purple darken-1 text-shadow">
+                    Add Recipe <i class="fas fa-plus-square right"></i>
+            </button>
+        </div>
     </div>
+</form>
+</div>
 
 {% endblock %}
