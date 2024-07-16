@@ -115,6 +115,13 @@ def add_recipe():
     vegies = mongo.db.vegies.find().sort("vegie_name", 1)
     return render_template("add_recipe.html", vegies=vegies)
 
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    vegies = mongo.db.vegies.find().sort("vegie_name", 1)
+    return render_template("edit_recipe.html", recipe=recipe, vegies=vegies)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
