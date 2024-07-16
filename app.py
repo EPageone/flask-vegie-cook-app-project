@@ -175,6 +175,13 @@ def edit_vegie(vegie_id):
     return render_template("edit_vegies.html", vegie=vegie)
 
 
+@app.route("/delete_vegie/<vegie_id>")
+def delete_vegie(vegie_id):
+    mongo.db.vegies.delete_one({"_id": ObjectId(vegie_id)})
+    flash("Vegie Successfully Deleted")
+    return redirect(url_for("get_vegies"))
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
