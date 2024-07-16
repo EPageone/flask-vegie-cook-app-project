@@ -147,6 +147,20 @@ def get_vegies():
     vegies = list(mongo.db.vegies.find().sort("vegie_name", 1))
     return render_template("manage_vegies.html", vegies=vegies)
 
+
+@app.route("/add_vegie", methods=["GET", "POST"])
+def add_vegie():
+    if request.method == "POST":
+        vegie = {
+            "vegie_name": request.form.get("vegie_name")
+        }
+        mongo.db.vegies.insert_one(vegie)
+        flash("New Veg Added")
+        return redirect(url_for("get_vegies"))
+
+    return render_template("add_vegies.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
