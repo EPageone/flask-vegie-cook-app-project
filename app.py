@@ -161,6 +161,21 @@ def add_vegie():
     return render_template("add_vegies.html")
 
 
+@app.route("/edit_vegie/<vegie_id>", methods=["GET", "POST"])
+def edit_vegie(vegie_id):
+    if request.method == "POST":
+        submit = {
+            "vegie_name": request.form.get("vegie_name")
+        }
+        mongo.db.vegies.update_many({"_id": ObjectId(vegie_id)}, {"$set": submit})
+        flash("Vegie Successfully Updated")
+        return redirect(url_for("get_vegies"))
+
+    vegie = mongo.db.vegies.find_one({"_id": ObjectId(vegie_id)})
+    return render_template("edit_vegies.html", vegie=vegie)
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
