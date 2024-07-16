@@ -9,12 +9,12 @@
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix light-purple-text text-darken-4"></i>
 					<select id="recipe_name" name="recipe_name" class="validate" required>
-                        <option value="" disabled selected>Choose Recipe</option>
-                        {% for recipe in recipes %}
-                            <option value="{{ recipe.recipe }}">{{ recipe.recipe_name }}</option>
+                        <option value="" disabled selected>Choose Veg</option>
+                        {% for vegie in vegies %}
+                            <option value="{{ vegie.vegie_name }}">{{ vegie.vegie_name }}</option>
                         {% endfor %}
                     </select>
-					<label for="category_name">Choose Recipe</label>
+					<label for="category_name">Choose Veg</label>
 				</div>
 			</div>
             <div class="row">
