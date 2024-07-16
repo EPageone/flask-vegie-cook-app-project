@@ -141,6 +141,12 @@ def delete_recipe(recipe_id):
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
+
+@app.route("/get_vegies")
+def get_vegies():
+    vegies = list(mongo.db.vegies.find().sort("vegie_name", 1))
+    return render_template("manage_vegies.html", vegies=vegies)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
