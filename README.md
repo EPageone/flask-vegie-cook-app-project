@@ -27,3 +27,112 @@ Password:       password1
 
 ## Wireframes
 
+![alt text](<wireframes/Vegie Cookapp Home Page.png>)
+![alt text](<wireframes/Vegie Cookapp Register Page.png>)
+![alt text](<wireframes/Vegie Cookapp Log In Page.png>)
+![alt text](<wireframes/Vegie Cookapp Profile Page.png>)
+![alt text](<wireframes/Vegie Cookapp Log Out Page.png>)
+![alt text](<wireframes/Vegie Cookapp Add Recipe Page.png>)
+![alt text](<wireframes/Vegie Cookapp Manage Vegies Page.png>)
+![alt text](<wireframes/Vegie Cookapp Mobile Home Page.png>)
+![alt text](<wireframes/Vegie Cookapp Mobile Register Page.png>)
+![alt text](<wireframes/Vegie Cookapp Mobile Profile Page.png>)
+![alt text](<wireframes/Vegie Cookapp Mobile Log In Page.png>)
+![alt text](<wireframes/Vegie Cookapp Mobile Add Recipe Page.png>)
+![alt text](<wireframes/Vegie Cookapp Mobile Manage Vegies.png>)
+![alt text](<wireframes/Vegie Cookapp Mobile Log Out Page .png>)
+![alt text](<wireframes/Vegie Cookapp Tablet Home Page.png>)
+![alt text](<wireframes/Vegie Cookapp Tablet Register Page .png>)
+![alt text](<wireframes/Vegie Cookapp Tablet Log In Page copy.png>)
+![alt text](<wireframes/Vegie Cookapp Tablet Log Out Page .png>)
+
+
+## Database Collections
+
+My MongoDB database consists of three collections, one for each of the following:
+
+1. Recipes
+2. Vegies
+3. Users
+
+The recipes collections contain all the information including recipe name, ingredients list, recipe name and who it is created by. 
+The vegies collections contain all the information for vegie names. 
+The users collection saves the users information if they have logged in. 
+
+
+## Technologies Used
+
+HTML- a standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
+CSS - cascading style sheets to style the content and layout of the site.
+JQuery - Javascript library which makes it easier to use Javascript.
+Python - Programming Language to create the backend that decides upon the responses to the user's input.
+Gitpod - IDE (Integrated Development Environment) to create and write code. 
+GitHub - for version control and backup of code
+Materalize -  A framework for developing responsive websites.
+Flask - python web framework to hold all the code and templates together as one site.
+MongoDB - Non-relational database to store all information about the recipes, vegies etc.
+Heroku - is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+### Libraries I had to install
+
+1. Flask
+2. PyMongo
+3. BSON
+4. JQeury
+5. DNSPython
+
+
+### Testing
+
+I tested my HTML and CSS code using the W3Schools Validation tools. 
+I also completed manual testing and tested out all functions to make sure they worked. 
+
+![alt text](<CSS Validated code checked and passed.jpg>)
+![alt text](<html validate 1.jpg>)
+![alt text](<html validate 2.jpg>)
+
+### Manual Testing
+
+
+| Feature                 |  Action                  | Expected Result                                |  Tested             | Passed        |
+| -----------------------:|:------------------------:| ----------------------------------------------:|--------------------:|--------------:|
+|  Home Page              | 5 recipes & search       | User can search and login                      | Yes                 | Yes           |
+|  Login                  | User directed to LogIn   | User can login to account or register          | Yes                 | Yes           |
+|  Add Recipes            | Add recipe, ingredients  | User can add and edit recipe                   | Yes                 | Yes           |
+| Manage Vegies           | Vegies cards appear      | Admin can edit, not seen by the user           | Yes                 | Yes           |
+| Log Out                 | Users can log out        | User can logout, returns to Log In Page        | Yes                 | Yes           |
+
+
+### Problems in Development
+
+I had some problems with certain python code such as update. I had to use the update_many method with python as the update method does not work. 
+There were many issues with the devlopment and I had to look through each line of code to check that it was correct and also that my databases in MogoDB were communicating with the python language. 
+
+
+### Deployment
+
+Project was deployed to heroku with some ease.
+Created Procfile and requirements.txt for dependencies.
+Created new heroku app and set environment variables.
+Linked my Github and environment with Heroku
+Pushed to heroku.
+Linked pre-existing mongodb to new site, no installation necessary.
+
+My link for Heroku is: https://flask-vegie-cook-app-project-6ed612cf44b6.herokuapp.com/
+
+My link for GitHub is: https://github.com/EPageone/flask-vegie-cook-app-project
+
+
+### Acknowledgments
+
+I used https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css
+I used https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.
+I used https://code.jquery.com/jquery-3.5.1.min.js
+I used W3 Schools to validate my CSS and HTML Code
+I used some recipes from my Mum, so thankyou. 
+
+
+
+### 
+
+
