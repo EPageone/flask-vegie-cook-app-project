@@ -125,10 +125,10 @@ My link for GitHub is: https://github.com/EPageone/flask-vegie-cook-app-project
 
 ### Acknowledgments
 
-I used https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css
+I used https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css.
 I used https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.
-I used https://code.jquery.com/jquery-3.5.1.min.js
-I used W3 Schools to validate my CSS and HTML Code
+I used https://code.jquery.com/jquery-3.5.1.min.js.
+I used W3 Schools to validate my CSS and HTML Code.
 I used some recipes from my Mum, so thankyou. 
 
 
