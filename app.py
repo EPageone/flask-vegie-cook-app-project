@@ -134,7 +134,7 @@ def edit_recipe(recipe_id):
             "recipe_description": request.form.get("recipe_description"),
             "created_by": session["user"]
         }
-        mongo.db.recipes.update_many({"_id": ObjectId(recipe_id)}, {"$set": submit})
+        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": submit})
         flash("Recipe Successfully Updated")
         
     
@@ -145,7 +145,7 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.recipes.delete_many({"_id": ObjectId(recipe_id)})
+    mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
