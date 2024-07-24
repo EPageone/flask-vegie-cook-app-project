@@ -62,16 +62,16 @@ The users collection saves the users information if they have logged in.
 
 ## Technologies Used
 
-HTML- a standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
-CSS - cascading style sheets to style the content and layout of the site.
-JQuery - Javascript library which makes it easier to use Javascript.
-Python - Programming Language to create the backend that decides upon the responses to the user's input.
-Gitpod - IDE (Integrated Development Environment) to create and write code. 
-GitHub - for version control and backup of code
-Materalize -  A framework for developing responsive websites.
-Flask - python web framework to hold all the code and templates together as one site.
-MongoDB - Non-relational database to store all information about the recipes, vegies etc.
-Heroku - is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+1. HTML- a standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
+2. CSS - cascading style sheets to style the content and layout of the site.
+3. JQuery - Javascript library which makes it easier to use Javascript.
+4. Python - Programming Language to create the backend that decides upon the responses to the user's input.
+5. Gitpod - IDE (Integrated Development Environment) to create and write code. 
+6. GitHub - for version control and backup of code
+7. Materalize -  A framework for developing responsive websites.
+8. Flask - python web framework to hold all the code and templates together as one site.
+9. MongoDB - Non-relational database to store all information about the recipes, vegies etc.
+10. Heroku - is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 ### Libraries I had to install
 
@@ -125,10 +125,10 @@ My link for GitHub is: https://github.com/EPageone/flask-vegie-cook-app-project
 
 ### Acknowledgments
 
-I used https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css
+I used https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css.
 I used https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.
-I used https://code.jquery.com/jquery-3.5.1.min.js
-I used W3 Schools to validate my CSS and HTML Code
+I used https://code.jquery.com/jquery-3.5.1.min.js.
+I used W3 Schools to validate my CSS and HTML Code.
 I used some recipes from my Mum, so thankyou. 
 
 
