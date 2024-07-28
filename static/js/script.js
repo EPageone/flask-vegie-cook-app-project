@@ -11,6 +11,22 @@ $(document).ready(function () {
         }
     });
 
+
+
+    var deleteLinks = document.querySelectorAll('.delete');
+
+    for (var i = 0; i < deleteLinks.length; i++) {
+      deleteLinks[i].addEventListener('click', function(event) {
+          event.preventDefault();
+    
+          var choice = confirm(this.getAttribute('data-confirm'));
+    
+          if (choice) {
+            window.location.href = this.getAttribute('href');
+          }
+      });
+    }
+
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };

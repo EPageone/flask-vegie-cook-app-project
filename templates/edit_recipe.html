@@ -1,60 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="light-purple-text text-darken-4 center-align">Edit Recipe</h3>
+    <h3 class="light-blue-text text-darken-4 center-align">Edit Recipe</h3>
 
     <div class="row card-panel purple lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-			<div class="row">
-				<div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix light-purple-text text-darken-4"></i>
-					<select id="recipe_name" name="recipe_name" class="validate" required>
-                        <option value="" disabled>Choose Veg</option>
-                        {% for vegie in vegies %}
-                            {% if vegie.vegie_name == recipe.vegie_name %}
-                                <option value="{{ vegie.vegie_name }}"selected>{{ vegie.vegie_name }}</option>
-                            {% else %}
-                                <option value="{{ vegie.vegie_name }}">{{ vegie.vegie_name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-					<label for="vegie_name">Choose Veg</label>
-				</div>
-			</div>
-            <!-- ingredients list -->
+            <!-- recipe name -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix light-purple-text text-darken-4"></i>
-                    <input id="ingredients_list" name="ingredients_list" minlength="5" maxlength="50"
-                       value="{{recipe.recipe_name}}" type="text" class="validate" required>
+                    <i class="fas fa-folder-open prefix light-purple-text text-darken-4"></i>
+                    <input id="recipe_name" name="recipe_name" minlength="3" maxlength="25"
+                        type="text" value="{{ recipe.recipe_name }}" class="validate" required>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            </div>
+            <!-- ingredients list-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix  light-purple-text text-darken-4"></i>
+                    <input id="ingredients_list" name="ingredients_list" minlength="3" maxlength="50"
+                        type="text" value="{{ recipe.ingredients_list }}" class="validate" required>
                     <label for="ingredients_list">Ingredients List</label>
                 </div>
             </div>
-            <!-- recipe description -->
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-purple-text text-darken-4"></i>
-                    <textarea id="recipe_description" name="recipe_description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required>
-                        {{- recipe.recipe_description -}}
-                    </textarea>
+                    <input id="recipe_description" name="recipe_description" minlength="3" maxlength="200"
+                        type="text" value="{{ recipe.recipe_description }}" class="validate" required>
                     <label for="recipe_description">Recipe Description</label>
                 </div>
             </div>
-            
-        <!-- submit button -->
+            <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
-                    <!-- cancel button-->
-                     <a href="{{ url_for('get_recipes')}}" class="btn-large red text-shadow">
+                    <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
                         Cancel <i class="fas fa-times-circle right"></i>
-                     </a>
+                    </a>
                     <button type="submit" class="btn-large purple darken-1 text-shadow">
-                    Edit Recipe <i class="fas fa-edit right"></i>
-            </button>
-        </div>
+                        Edit Recipe <i class="fas fa-edit right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
-</form>
-</div>
 
 {% endblock %}
